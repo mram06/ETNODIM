@@ -1,0 +1,20 @@
+@import "nullstyle.scss";
+
+textarea { resize: none; }
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.title{
+}
+.subtitle{
+}
