@@ -1,20 +1,170 @@
 @import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Raleway:wght@300;400;600;700&family=Roboto&display=swap');
+
 
 textarea { resize: none; }
+a{ color: black; }
 html{
     overflow-x: hidden;
 }
 body{
     overflow-x: hidden;
-    font-size: 16px;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Dela Gothic One', sans-serif;
 }
-
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
 .container{
     width: 100%;
     margin: 0 auto;
     max-width: 1440px;
 }
+.content{
+    flex: 1 1 auto;
+}
 .title{
+    font-family: 'Dela Gothic One', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 140.3%;
+    text-transform: uppercase;
 }
 .subtitle{
 }
+.active{
+    color: #DA1F39;
+    font-weight: 700;
+}
+.underline{
+    border-bottom: 1px solid black;
+}
+
+// header
+.header {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        line-height: 19px;
+        height: 100px;
+        padding: 0 80px;
+        background-color: bisque;
+    }
+    &__menu {
+    }
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        a{
+            margin: 0 30px 0 0;
+        }
+        a:last-child{
+            margin: 0;
+        }
+    }
+    &__logo {
+    }
+    &__tools {
+        display: flex;
+        align-items: center;
+        a{
+            margin: 0 24px 0 0;
+        }
+        a:nth-child(1), a:nth-child(2){
+            padding: 0 14px 0 0;
+            background: url(../img/icons/nav_arrow.svg) 27px 50% no-repeat;
+        }
+        a:nth-child(3){
+            margin: 0 23px 0 0;
+        }
+        a:nth-child(3){
+            margin: 0 16px 0 0;
+        }
+        a:last-child{
+            margin: 0;
+        }
+    }
+    &__cart{
+        position: relative;
+    }
+    &__cart-label{
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        text-align: center;
+        background: #DA1F39;
+        display: block;
+        position: absolute;
+        border-radius: 6px;
+        font-size: 10px;
+        right: -3px;
+        bottom: -3px;
+        padding: 0px 4px;
+        line-height: normal;
+    }
+}
+// header end
+
+// footer
+.footer {
+    & li{
+        margin: 0 0 10px 0;
+    }
+    &__body {
+        background: #F4F4F4;
+        font-weight: 300;
+        line-height: 166.19%;
+        padding: 62px 200px 70px 80px;
+    }
+    &__logo{
+        margin: 0 0 0 45%;
+    }
+    &__row{
+        margin: 32px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__about {
+        display: flex;
+    }
+    &__about-about, &__about-info {
+        margin: 0 50px 0 0;
+        & li:nth-child(3){
+            margin: 0 0 30px 0;
+        }
+        & li:nth-child(4){
+            margin: 0;
+        }
+    }
+    &__contacts { 
+    }
+    &__contacts-list{
+        & li:nth-child(4), & li:nth-child(5){
+            display: inline;
+        }
+        & li:nth-child(4){
+            margin: 0 20px 0 0;
+        }
+    }
+    &__socials {
+    }
+    &__socials-socials{
+        display: flex;
+        gap: 24px;
+        margin: 14px 0 66px 0;
+        & li{
+            margin: 0;
+        }
+        & img{
+            vertical-align: middle;
+        }
+    }
+}
+// footer end
