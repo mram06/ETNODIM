@@ -1,6 +1,16 @@
 @import "nullstyle.scss";
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Raleway:wght@300;400;600;700&family=Roboto&display=swap');
 
+@font-face {
+    font-family: 'Dela Gothic One';
+    src: url('../fonts/DelaGothicOne-Regular.woff2') format('woff2'),
+        url('../fonts/DelaGothicOne-Regular.woff') format('woff'),
+        url('../fonts/DelaGothicOne-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 
 textarea { resize: none; }
 a{ color: black; }
@@ -38,6 +48,15 @@ body{
 }
 .subtitle{
 }
+p{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 166.19%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
 .active{
     color: #DA1F39;
     font-weight: 700;
@@ -56,7 +75,7 @@ body{
         line-height: 19px;
         height: 100px;
         padding: 0 80px;
-        background-color: bisque;
+        // background-color: bisque;
     }
     &__menu {
     }
@@ -114,10 +133,16 @@ body{
 
 // footer
 .footer {
+    &__link-arrow{
+        position: absolute;
+        left: 47%;
+        top: -40px;
+    }
     & li{
         margin: 0 0 10px 0;
     }
     &__body {
+        position: relative;
         background: #F4F4F4;
         font-weight: 300;
         line-height: 166.19%;
@@ -222,6 +247,30 @@ body{
     }
 
     &__sort {
+        align-self: flex-end;
+        font-size: 12px;
+        position: relative;
+        & input{
+            display: none;
+        }
+        & label::after{
+            content: ' ' url(../img/icons/aside_arrow.svg);
+        }
+        & input:checked ~ .catalogue__sort-menu{
+            height: auto;
+            opacity: 1;
+            transition: 1s height ease-in-out .2s, .3s opacity ease-in-out;
+        }
+    }
+    &__sort-menu {
+        position: absolute;
+        height: 0px;
+        opacity: 0;
+        background: #F4F4F4;
+        border: 1px solid #e0dede8e;
+        & li{
+            padding: 4px 2px;
+        }
     }
 }
 
@@ -244,14 +293,14 @@ body{
         }
 
         & input:checked ~ .aside__filter-items{
-            opacity: 1;
             height: auto;
-            transition: 1s height ease .2s, 1s opacity ease-in-out;
+            opacity: 1;
+            transition: 1s height ease-in-out .2s, .3s opacity ease-in-out;
         }
     }
     &__filter-items {
         opacity: 0;
-        height: 0;
+        height: 0px;
         margin: 5px 0 0 0;
         color: #565656;
         & input{
@@ -259,5 +308,74 @@ body{
         }
     }
 }
+
+.items {
+    &__container {
+        margin: 45px 0 64px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    &__item {
+    }
+
+    &__item-photo {
+    }
+
+    &__item-name {
+        margin: 5px 0 10px 0;
+    }
+
+    &__item-price {
+        font-weight: bold;
+    }
+}
+
+.showmore {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        margin: 0 0 130px 50%;
+    }
+
+    &__pages {
+    }
+}
+
+.show-more-btn{
+    display: inline;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    background: none, url(../img/icons/show_more_line.svg) 0 19px no-repeat;
+    &::after{
+        content: ' ' url(../img/icons/refresh.svg);
+    }
+}
+
+.pages {
+    & li{
+        display: inline-block;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 166.2%;
+        margin: 0 10px 0 0;
+    }
+    & li:nth-child(3)::after{
+        content: '...';
+        margin: 0 0 0 10px;
+    }
+}
+.not-active{
+    color: #B0B0B0;
+}
+
+
+
 
 // end of catalogue styles

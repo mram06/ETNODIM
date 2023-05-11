@@ -21,7 +21,7 @@
                             <a href=""><li>Про нас</li></a>
                         </ul>
                     </nav>
-                    <a href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
+                    <a href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo" id="top"></a>
                     <ul class="header__tools">
                         <a href=""><li>UA</li></a>
                         <a href=""><li><img src="img/icons/gryvnia.svg" alt="gryvnia icon"></li></a>
@@ -115,7 +115,6 @@
                                         <label for="linen">льон</label><br>
                                         <input type="checkbox" id="cotton">
                                         <label for="cotton">бавовна</label><br>
-                                        <input type="checkbox" id="S">
                                     </div>
                                 </div>
 
@@ -123,38 +122,87 @@
                                     <label for="sleeve">Рукав</label>
                                     <input type="checkbox" id="sleeve">
                                     <div class="aside__filter-items">
-                                        <input type="checkbox" id="XXS">
-                                        <label for="XXS">32 | XXS (53)</label><br>
-                                        <input type="checkbox" id="XS">
-                                        <label for="XS">34 | XS (60)</label><br>
-                                        <input type="checkbox" id="S">
-                                        <label for="S">36 | S (60)</label><br>
-                                        <input type="checkbox" id="M">
-                                        <label for="M">38 | M (60)</label><br>
-                                        <input type="checkbox" id="L">
-                                        <label for="L">40 | L (60)</label><br>
-                                        <input type="checkbox" id="XL">
-                                        <label for="XL">42 | XL (58)</label><br>
-                                        <input type="checkbox" id="XXL">
-                                        <label for="XXL">46 | XXL (13)</label><br>
-                                        <input type="checkbox" id="XXXL">
-                                        <label for="XXXL">48 | XХXL (4)</label>
+                                        <input type="checkbox" id="cuffs">
+                                        <label for="cuffs">з манджетом</label><br>
+                                        <input type="checkbox" id="nocuffs">
+                                        <label for="nocuffs">без манджета</label>
                                     </div>
                                 </div>
-                            </aside>
-                            
+                            </aside>                       
                             <div class="catalogue__items">
                                 <div class="catalogue__heading">
-                                    <div class="catalogue__sort">Сортувати за: новинки</div>
+                                    <div class="catalogue__sort">
+                                        <a href=""></a>
+                                        <a href=""></a>
+                                        <label for="sort">Сортувати за: новинки</label>
+                                        <input type="checkbox" id="sort">
+                                        <ul class="catalogue__sort-menu">
+                                            <li><a href="">за релевантністю</a></li>
+                                            <li><a href="">від дешевих до дорогих</a></li>
+                                            <li><a href="">від дорогих до дешевих</a></li>
+                                        </ul>
+                                    </div>
                                     <h2 class="catalogue__title title">Жіночі вишиванки</h2>
                                 </div>
-                                
+                                <div class="items__container">
+                                    <div class="items__item">
+                                        <div class="items__item-photo"><a href=""><img src="img/items/item1.png" alt="item photo"></a></div>
+                                        <p class="items__item-name">Вишиванка з рослинним орнаментом Lito</p>
+                                        <p class="items__item-price">2 800 грн.</p>
+                                    </div>
+
+                                    <div class="items__item">
+                                        <div class="items__item-photo"><a href=""><img src="img/items/item2.png" alt="item photo"></a></div>
+                                        <p class="items__item-name">Вишиванка блакитного кольору з рослинним орнаментом Fialka</p>
+                                        <p class="items__item-price">3 400 грн.</p>
+                                    </div>
+
+                                    <div class="items__item">
+                                        <div class="items__item-photo"><a href=""><img src="img/items/item3.png" alt="item photo"></a></div>
+                                        <p class="items__item-name">Лляна вишиванка з геометричним орнаментом Nezalezhni</p>
+                                        <p class="items__item-price">4 200 грн.</p>
+                                    </div>
+
+                                    <div class="items__item">
+                                        <div class="items__item-photo"><a href=""><img src="img/items/item4.png" alt="item photo"></a></div>
+                                        <p class="items__item-name">Вишиванка з рослинним орнаментом Kashtan</p>
+                                        <p class="items__item-price">3 800 грн.</p>
+                                    </div>
+
+                                    <div class="items__item">
+                                        <div class="items__item-photo"><a href=""><img src="img/items/item5.png" alt="item photo"></a></div>
+                                        <p class="items__item-name">Легка блузка вільного крою з орнаментом Indi</p>
+                                        <p class="items__item-price">3 800 грн.</p>
+                                    </div>
+
+                                    <div class="items__item">
+                                        <div class="items__item-photo"><a href=""><img src="img/items/item6.png" alt="item photo"></a></div>
+                                        <p class="items__item-name">Біла вишиванка вільного крою Svitanok</p>
+                                        <p class="items__item-price">2 980 грн.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="showmore">
+                            <div class="showmore__row">
+                                <button class="showmore__button show-more-btn">Показати більше</button>
+                                <ul class="showmore__pages pages">
+                                    <li><a href="" class="not-active">1</a></li>
+                                    <li><a href="">2</a></li>
+                                    <li><a href="">3</a></li>
+                                    <li><a href="">6</a></li>
+                                    <li><a href="">Наступна</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+
+                    
                 </div>
             </div>
-
+            
+            
         </div>
 
         <!-- footer  -->
@@ -162,6 +210,7 @@
             <div class="container">
                 <div class="footer__body">
                     <a href="index.html" class="footer__logo"><img src="img/logo.svg" alt="logo"></a>
+                    <a href="#top" class="footer__link-arrow link-arrow"><img src="img/icons/link_arrow.svg" alt="arrow icon"></a>
                     <div class="footer__row">
                         <div class="footer__about">
                             <ul class="footer__about-about">
