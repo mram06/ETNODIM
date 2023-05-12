@@ -167,10 +167,6 @@ p {
 .header__tools a {
   margin: 0 24px 0 0;
 }
-.header__tools a:nth-child(1), .header__tools a:nth-child(2) {
-  padding: 0 14px 0 0;
-  background: url(../img/icons/nav_arrow.svg) 27px 50% no-repeat;
-}
 .header__tools a:nth-child(3) {
   margin: 0 23px 0 0;
 }
@@ -179,6 +175,33 @@ p {
 }
 .header__tools a:last-child {
   margin: 0;
+}
+.header__tools input {
+  display: none;
+}
+.header__tools label {
+  cursor: pointer;
+}
+.header__tools input:checked ~ .header__language-hidden {
+  height: auto;
+  opacity: 1;
+  transition: 1s height ease-in-out 0.2s, 0.3s opacity ease-in-out;
+}
+.header__language-hidden {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+.header__language-hidden::after {
+  content: none;
+}
+.header__language-hidden li:hover {
+  background: #F4F4F4;
+}
+.header__language {
+  margin: 0 24px 0 0;
+  padding: 0 14px 0 0;
+  background: url(../img/icons/nav_arrow.svg) 27px 50% no-repeat;
 }
 .header__cart {
   position: relative;
@@ -281,6 +304,7 @@ p {
 }
 .catalogue__aside {
   width: 240px;
+  padding: 35px 0 0 0;
 }
 .catalogue__items {
   width: 100%;
@@ -293,6 +317,9 @@ p {
 .catalogue__sort input {
   display: none;
 }
+.catalogue__sort label {
+  cursor: pointer;
+}
 .catalogue__sort label::after {
   content: " " url(../img/icons/aside_arrow.svg);
 }
@@ -302,14 +329,18 @@ p {
   transition: 1s height ease-in-out 0.2s, 0.3s opacity ease-in-out;
 }
 .catalogue__sort-menu {
+  top: 15px;
   position: absolute;
   height: 0px;
   opacity: 0;
-  background: #F4F4F4;
+  background-color: white;
   border: 1px solid rgba(224, 222, 222, 0.5568627451);
 }
 .catalogue__sort-menu li {
   padding: 4px 2px;
+}
+.catalogue__sort-menu li :hover {
+  background: #F4F4F4;
 }
 
 .aside__filter {
@@ -324,6 +355,7 @@ p {
   display: none;
 }
 .aside__filter > label {
+  cursor: pointer;
   font-weight: bold;
 }
 .aside__filter > label::after {
@@ -346,9 +378,13 @@ p {
 
 .items__container {
   margin: 45px 0 64px 0;
+  max-width: 1084px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 50px;
+}
+.items__item-photo img {
+  max-width: 100%;
 }
 .items__item-name {
   margin: 5px 0 10px 0;
