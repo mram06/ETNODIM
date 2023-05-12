@@ -123,6 +123,22 @@ body {
   text-transform: uppercase;
 }
 
+.subtitle {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 151.3%;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
 p {
   font-family: "Raleway";
   font-style: normal;
@@ -135,6 +151,16 @@ p {
 .active {
   color: #DA1F39;
   font-weight: 700;
+}
+
+.button {
+  background: #DA1F39;
+  text-align: center;
+  padding: 17px 0;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
 }
 
 .underline {
@@ -281,13 +307,17 @@ p {
   font-weight: bold;
 }
 .breadcrumbs__list li {
+  position: relative;
   display: inline-block;
-  padding: 0 35px 0 0;
-  background: url(../img/icons/breadcrumbs__line.svg) 54px 6px no-repeat;
+  margin: 0 35px 0 0;
+}
+.breadcrumbs__list li:not(:first-child)::before {
+  content: url(../img/icons/breadcrumbs__line.svg);
+  position: absolute;
+  left: -30px;
+  bottom: 4px;
 }
 .breadcrumbs__list li:last-child {
-  background: none;
-  padding: 0;
   font-weight: normal;
 }
 
@@ -377,11 +407,11 @@ p {
 }
 
 .items__container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 50px;
   margin: 45px 0 64px 0;
   max-width: 1084px;
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
 }
 .items__item-photo img {
   max-width: 100%;
@@ -426,4 +456,125 @@ p {
 
 .not-active {
   color: #B0B0B0;
+}
+
+.item__row {
+  display: flex;
+  justify-content: space-between;
+}
+.item__gallery {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+}
+.item__gallery :first-child {
+  grid-column: span 2;
+}
+.item__about {
+  max-width: 435px;
+}
+.item__about > span {
+  font-size: 10px;
+  line-height: 12px;
+  color: #B5B5B5;
+}
+.item__about-subtitle {
+  max-width: 434px;
+}
+.item__about-color {
+  margin: 40px 0 20px 0;
+  display: flex;
+  gap: 47px;
+}
+.item__about-counter {
+  display: flex;
+  gap: 10px;
+}
+.item__about-counter button {
+  width: 21px;
+  height: 21px;
+  background: #F4F4F4;
+}
+.item__sizes label {
+  margin: 0 15px 0 0;
+}
+.item__sizes label:last-child {
+  margin: 0;
+}
+.item__sizes input {
+  display: none;
+}
+.item__sizes input:checked + label {
+  font-weight: bold;
+}
+.item__table {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 12px;
+  border-bottom: 1px solid black;
+}
+.item__outofstock {
+  font-size: 12px;
+  color: #DA1F39;
+}
+.item__price {
+  margin: 10px 0;
+  font-weight: 700;
+}
+.item__button {
+  width: 242px;
+  margin: 0 0 70px 0;
+}
+.item__accord :last-child .item__accord-answer {
+  border: none;
+}
+.item__accord-body {
+  position: relative;
+  margin: 0 0 -10px 0;
+}
+.item__accord-title {
+  padding: 15px 0;
+}
+.item__accord-checkbtn {
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 14px;
+  right: 0;
+}
+.item__accord-checkbtn:checked ~ .item__accord-btn > span::before {
+  content: url(../img/icons/minus.svg);
+}
+.item__accord-checkbtn:checked ~ .item__accord-answer {
+  height: auto;
+  transition: 1s height ease-in-out 0.2s;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.item__accord-checkbtn:checked ~ .item__accord-answer > p {
+  opacity: 1;
+  transition: 0.3s opacity ease-in-out;
+}
+.item__accord-btn span {
+  position: absolute;
+  right: 2px;
+  top: 15px;
+  z-index: 1;
+}
+.item__accord-btn span::before {
+  content: url(../img/icons/plus.svg);
+}
+.item__accord-answer {
+  padding: 0 0 15px 0;
+  height: 0px;
+  border-top: 1px solid black;
+}
+.item__accord-answer p {
+  opacity: 0;
+}
+.item__accord-answer p:not(:last-child) {
+  margin: 0 0 15px 0;
 }
