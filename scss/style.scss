@@ -509,14 +509,18 @@ p{
 .item {
     &__row {
         display: flex;
+        gap: 50px;
         justify-content: space-between;
     }
     &__gallery {
         display: grid;
         gap: 40px;
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
         :first-child{
             grid-column: span 2;
+        }
+        & img{
+            max-width: 100%;
         }
     }
 
@@ -666,6 +670,7 @@ p{
     }
     &__arrow-row{
         position: absolute;
+        z-index: 3;
         top: 20px;
         right: 0;
     }
@@ -801,6 +806,13 @@ p{
     .footer__about-info{
         margin: 0;
     }
+
+    // item
+    .slider__body{
+        background: none;
+        height: 650px;
+    }
+    // end of item
 }
 
 
@@ -814,6 +826,22 @@ p{
     .footer__logo{
         margin: 0 0 0 30%;
     }
+
+    // item
+    .item, .slider__body{
+        padding: 0 10px;
+    }
+    .item__gallery{
+        gap: 10px;
+    }
+
+    .slider__body{
+        margin: 50px 0 0 0;
+    }
+    .slider__row{
+        padding: 0 38px;
+    }
+    // end of item
 }
 @media only screen and (max-width: 530px) {
     .header__body{
@@ -829,6 +857,40 @@ p{
     .footer__socials-socials{
         flex-wrap: wrap;
     }
+
+    // item
+    .item__row{
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .item__gallery{
+        :nth-child(4){
+            display: none;
+        }
+        :nth-child(5){
+            display: none;
+        }
+    }
+    .item__about{
+        & > span{
+            display: none;
+        }
+    }
+    .item__about-color{
+        margin: 24px 0;
+    }
+    .item__button{
+        margin: 0 0 50px 0;
+    }
+    .slider__arrow-row{
+        position: absolute;
+        top: 250px;
+        right: 10px;
+    }
+    .slider__arrow-left{
+        left: 10px;
+    }
+    // end of item
 }
 @media only screen and (max-width: 450px) {
     .footer__copyright-hidden{
@@ -864,6 +926,11 @@ p{
         margin: 0 0 0 25%;
     }
     
+    // item
+    .slider__row{
+        padding: 0 10px;
+    }
+    // end of item
 }
 
 
