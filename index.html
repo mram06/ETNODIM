@@ -126,7 +126,15 @@
                                 </p>
                                 <button class="collection__button button">переглянути</button>
                             </div>
-                            <div class="collection__photo"><img src="img/index/collection_photo.png" alt="photo"></div>
+                            <div class="collection__photo">
+                                <picture>
+                                    <source media="(min-width:1000px)" srcset="img/index/collection_photo.png">
+                                    <source media="(min-width:451px)" srcset="img/index/collection_photo_medium.png">
+                                    <source media="(max-width:450px)" srcset="img/index/collection_photo_mobile.png">
+                                    <img src="img/index/collection_photo.png" alt="photo" style="width:auto;">
+                                </picture>
+                                <!-- <img src="img/index/collection_photo.png" alt="photo"> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,7 +149,7 @@
                                 <a href="" class="slider__arrow"><img src="img/slider/arrow_right.svg" alt="arrow icon"></a>
                             </div>
                         </div> -->
-                        <h1 class="slider__title title">нові надходження</h1>
+                        <h1 class="slider__title title">знижки</h1>
 
                         <!-- slider arrows -->
                         <input class="slider__input-left" checked type="radio" name=slider id="left">

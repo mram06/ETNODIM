@@ -917,9 +917,9 @@ p{
 .etnodim {
     padding: 0 80px;
     &__body {
-        background: url(../img/index/etnodim_bg.png) no-repeat;
+        background: url(../img/index/etnodim_bg.png) 0 0/100% auto no-repeat;
         height: 420px;
-        margin: 130px 0 126px 16%;
+        margin: 130px 16% 126px 16%;
     }
 }
 .index__slider-photo{
@@ -929,7 +929,7 @@ p{
 }
 
 .collection {
-    background: url(../img/index/collection_bg.png) no-repeat;
+    background: url(../img/index/collection_bg.png) 0 0/100% auto no-repeat;
     padding: 80px 80px 0 80px;
     &__body {
         background: white;
@@ -967,6 +967,9 @@ p{
     }
 
     &__photo {
+        & picture{
+            max-width: 100%;
+        }
     }
 }
 
@@ -1047,9 +1050,9 @@ p{
 .stuffs {
     padding: 0 80px;
     &__body {
-        background: url(../img/index/etnodim_bg.png) no-repeat;
+        background: url(../img/index/etnodim_bg.png) 0 0/100% auto no-repeat;
         height: 420px;
-        margin: 0 0 100px 16%;
+        margin: 0 16% 100px 16%;
     }
 }
 
@@ -1211,6 +1214,29 @@ p{
     .footer__body{
         padding: 62px 80px 70px 80px;
     }
+    // index
+    .collection{
+        padding: 10px 10px 0 10px;
+        &__body
+        &__about{
+            padding: 76px 20px 0 20px;
+        }
+        &__row{
+        }
+        &__photo picture{
+            flex: 1 1 auto;
+        }
+    }
+    .philosophy__row{
+        flex-wrap: wrap;
+    }
+    .philosophy__about{
+        padding: 0 10px;
+    }
+    .philosophy__photos img{
+        max-width: 100%;
+    }
+    // end of index
 }
 
 @media only screen and (max-width: 860px) {
@@ -1253,6 +1279,21 @@ p{
     .footer__contacts{
         order: 3;
     }
+
+    // index
+    .hero__body{
+        background: none, url(../img/index/hero_bg_mobile.png) 0 0/100% auto no-repeat;
+        padding: 140px 0 98px 15px;
+        height: auto;
+    }
+    .hero__title{
+        font-size: 24px;
+        line-height: 112.3%;
+    }
+    .etnodim__body, .stuffs__body{
+        margin: 50px 10% 50px 10%;
+    }
+    // end of index
 }
 @media only screen and (max-width: 750px) {
     .showmore__pages {
@@ -1313,7 +1354,43 @@ p{
         gap: 30px;
     }
     // end of cart
+
+    // index
+    .hero, .etnodim, .stuffs{
+        padding: 0 10px;
+    }
+    .etnodim__body, .stuffs__body{
+        margin: 50px 0 0 0;
+        height: 200px;
+    }
+    .collection{
+        padding: 80px 10px 0 10px;
+        &__about {
+            padding: 70px 5px 0 5px;
+        }
+        &__photo{
+        }
+    }
+    .philosophy__body{
+        margin: 0;
+        padding: 0;
+    }
+    .philosophy__row{
+        gap: 48px;
+    }
+    .philosophy__photos img:first-child{
+        max-width: 272px;
+        max-width: 221px;
+    }
+    .philosophy__photos img:last-child{
+        top: 30px;
+        left: 107px;
+        max-width: 185px;
+    }
+        
 }
+    // end of index
+
 @media only screen and (max-width: 530px) {
     .header__body{
         height: auto;
@@ -1388,6 +1465,32 @@ p{
             margin: 0;
         }
     }
+    // index
+    .collection{
+        padding: 20px 10px 0 10px;
+        position: relative;
+        background: none, url(../img/index/collection_bg.png) 0 0/auto 240px no-repeat;
+        &__body{
+            height: 500px;
+        }
+        &__about {
+        }
+        &__text{
+            margin: 0;
+            position: absolute;
+            top: 300px;
+        }
+        &__button{
+            margin: 0;
+            position: absolute;
+            left: 25%;
+            top: 410px;
+        }
+    }
+    .offer__body{
+        margin: 0;
+    }
+    // end of index
 }
 @media only screen and (max-width: 400px) {
     .title{
@@ -1402,6 +1505,13 @@ p{
         padding: 0 10px;
     }
     // end of item
+
+    // index
+    .income__body{
+        height: 550px;
+    }
+
+    // end of index
 }
 
 

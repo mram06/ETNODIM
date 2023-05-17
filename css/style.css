@@ -874,9 +874,9 @@ p {
   padding: 0 80px;
 }
 .etnodim__body {
-  background: url(../img/index/etnodim_bg.png) no-repeat;
+  background: url(../img/index/etnodim_bg.png) 0 0/100% auto no-repeat;
   height: 420px;
-  margin: 130px 0 126px 16%;
+  margin: 130px 16% 126px 16%;
 }
 
 .index__slider-photo {
@@ -886,7 +886,7 @@ p {
 }
 
 .collection {
-  background: url(../img/index/collection_bg.png) no-repeat;
+  background: url(../img/index/collection_bg.png) 0 0/100% auto no-repeat;
   padding: 80px 80px 0 80px;
 }
 .collection__body {
@@ -916,6 +916,10 @@ p {
 .collection__button {
   width: 215px;
 }
+.collection__photo picture {
+  max-width: 100%;
+}
+
 .offer__slider-photo {
   background: url(../img/index/offer_bg.png) no-repeat;
   width: 325px;
@@ -981,9 +985,9 @@ p {
   padding: 0 80px;
 }
 .stuffs__body {
-  background: url(../img/index/etnodim_bg.png) no-repeat;
+  background: url(../img/index/etnodim_bg.png) 0 0/100% auto no-repeat;
   height: 420px;
-  margin: 0 0 100px 16%;
+  margin: 0 16% 100px 16%;
 }
 
 .drabyna {
@@ -1104,6 +1108,24 @@ p {
   .footer__body {
     padding: 62px 80px 70px 80px;
   }
+  .collection {
+    padding: 10px 10px 0 10px;
+  }
+  .collection__body .collection__about {
+    padding: 76px 20px 0 20px;
+  }
+  .collection__photo picture {
+    flex: 1 1 auto;
+  }
+  .philosophy__row {
+    flex-wrap: wrap;
+  }
+  .philosophy__about {
+    padding: 0 10px;
+  }
+  .philosophy__photos img {
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 860px) {
   .header__menu-list a:not(:first-child) {
@@ -1144,6 +1166,18 @@ p {
   }
   .footer__contacts {
     order: 3;
+  }
+  .hero__body {
+    background: none, url(../img/index/hero_bg_mobile.png) 0 0/100% auto no-repeat;
+    padding: 140px 0 98px 15px;
+    height: auto;
+  }
+  .hero__title {
+    font-size: 24px;
+    line-height: 112.3%;
+  }
+  .etnodim__body, .stuffs__body {
+    margin: 50px 10% 50px 10%;
   }
 }
 @media only screen and (max-width: 750px) {
@@ -1193,6 +1227,35 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+  }
+  .hero, .etnodim, .stuffs {
+    padding: 0 10px;
+  }
+  .etnodim__body, .stuffs__body {
+    margin: 50px 0 0 0;
+    height: 200px;
+  }
+  .collection {
+    padding: 80px 10px 0 10px;
+  }
+  .collection__about {
+    padding: 70px 5px 0 5px;
+  }
+  .philosophy__body {
+    margin: 0;
+    padding: 0;
+  }
+  .philosophy__row {
+    gap: 48px;
+  }
+  .philosophy__photos img:first-child {
+    max-width: 272px;
+    max-width: 221px;
+  }
+  .philosophy__photos img:last-child {
+    top: 30px;
+    left: 107px;
+    max-width: 185px;
   }
 }
 @media only screen and (max-width: 530px) {
@@ -1259,6 +1322,28 @@ p {
   .footer__about-about li:nth-child(4), .footer__about-info li:nth-child(4) {
     margin: 0;
   }
+  .collection {
+    padding: 20px 10px 0 10px;
+    position: relative;
+    background: none, url(../img/index/collection_bg.png) 0 0/auto 240px no-repeat;
+  }
+  .collection__body {
+    height: 500px;
+  }
+  .collection__text {
+    margin: 0;
+    position: absolute;
+    top: 300px;
+  }
+  .collection__button {
+    margin: 0;
+    position: absolute;
+    left: 25%;
+    top: 410px;
+  }
+  .offer__body {
+    margin: 0;
+  }
 }
 @media only screen and (max-width: 400px) {
   .title {
@@ -1269,6 +1354,9 @@ p {
   }
   .slider__row {
     padding: 0 10px;
+  }
+  .income__body {
+    height: 550px;
   }
 }
 .showmore__row {
