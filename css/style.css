@@ -162,6 +162,10 @@ p {
   color: white;
   font-weight: 600;
 }
+.button:hover {
+  background: #9f1729;
+  transition: 0.1s background ease-in;
+}
 
 .underline {
   border-bottom: 1px solid black;
@@ -840,6 +844,248 @@ p {
 }
 .checkout__summary :last-child {
   font-weight: bold;
+}
+
+.hero {
+  padding: 0 80px;
+}
+.hero__body {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url(../img/index/hero_bg.png) no-repeat;
+  height: 550px;
+  padding: 155px 0 0 88px;
+}
+.hero__title {
+  font-size: 64px;
+  line-height: 72px;
+  color: #FFFFFF;
+}
+.hero__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin: 10px 0 50px 0;
+}
+.hero__button {
+  width: 225px;
+}
+
+.etnodim {
+  padding: 0 80px;
+}
+.etnodim__body {
+  background: url(../img/index/etnodim_bg.png) no-repeat;
+  height: 420px;
+  margin: 130px 0 126px 16%;
+}
+
+.index__slider-photo {
+  background: url(../img/index/slider_bg.png) no-repeat;
+  width: 325px;
+  height: 400px;
+}
+
+.collection {
+  background: url(../img/index/collection_bg.png) no-repeat;
+  padding: 80px 80px 0 80px;
+}
+.collection__body {
+  background: white;
+  text-align: center;
+}
+.collection__row {
+  display: flex;
+}
+.collection__about {
+  padding: 134px 100px 0 100px;
+}
+.collection__label {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #939694;
+}
+.collection__title {
+  max-width: 543px;
+}
+.collection__text {
+  margin: 20px 0 50px 0;
+  font-size: 14px;
+}
+.collection__button {
+  width: 215px;
+}
+.offer__slider-photo {
+  background: url(../img/index/offer_bg.png) no-repeat;
+  width: 325px;
+  height: 400px;
+}
+.offer__slider-price {
+  color: #DA1F39;
+}
+.offer__slider-price span {
+  margin: 0 0 0 10px;
+  color: #939694;
+  text-decoration: line-through;
+}
+
+.income__body, .offer__body {
+  background: none;
+}
+
+.philosophy__body {
+  padding: 0 217px 0 0;
+  margin: 0 0 150px 0;
+}
+.philosophy__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.philosophy__photos {
+  position: relative;
+}
+.philosophy__photos img:last-child {
+  position: absolute;
+  left: 188px;
+  top: 115px;
+  z-index: 2;
+}
+.philosophy__about {
+  max-width: 500px;
+}
+.philosophy__label {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #939694;
+}
+.philosophy__text {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 30px 0;
+}
+.philosophy__button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #DA1F39;
+  background: none, url(../img/index/philosophy_arrow.svg) 0 12px no-repeat;
+  padding: 0 16px 3px 0;
+}
+
+.stuffs {
+  padding: 0 80px;
+}
+.stuffs__body {
+  background: url(../img/index/etnodim_bg.png) no-repeat;
+  height: 420px;
+  margin: 0 0 100px 16%;
+}
+
+.drabyna {
+  background: url(../img/index/drabyna_bg.png) no-repeat;
+  padding: 80px 80px 0 80px;
+}
+.drabyna__body {
+  text-align: center;
+}
+.drabyna__row {
+  background: url(../img/index/drabyna_bg2.png) no-repeat;
+  height: 630px;
+}
+.drabyna__about {
+  background: white;
+  padding: 134px 100px 0 100px;
+  max-width: 523px;
+  height: 550px;
+}
+.drabyna__label {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #939694;
+}
+.drabyna__title {
+  max-width: 543px;
+}
+.drabyna__text {
+  margin: 20px 0 50px 0;
+  font-size: 14px;
+}
+.drabyna__button {
+  width: 215px;
+}
+.store__body {
+  padding: 180px 0 0 80px;
+  display: flex;
+  gap: 100px;
+  margin: 0 0 130px 0;
+}
+.store__location-text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 136.19%;
+  background: url(../img/index/location_icon.svg) 3px 0 no-repeat;
+  padding: 0 0 0 28px;
+  margin: 31px 0 0 0;
+}
+.store__times {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 136.19%;
+  background: url(../img/index/clock_icon.svg) no-repeat;
+  padding: 0 0 0 28px;
+  margin: 32px 0 50px 0;
+}
+.store__photos {
+  position: relative;
+}
+.store__photos :last-child {
+  position: absolute;
+  right: 168px;
+  top: 50px;
+}
+.store__button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #DA1F39;
+  background: none, url(../img/index/store_arrow.svg) 0 12px no-repeat;
+  padding: 0 16px 3px 0;
+}
+
+.follow__body {
+  text-align: center;
+  padding: 0 80px;
+}
+.follow__label {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #939694;
+}
+.follow__title {
+  margin: 0 0 10px 0;
+}
+.follow__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0 0 130px 0;
+}
+.follow__text {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 10px 0 50px 0;
 }
 
 @media only screen and (max-width: 1055px) {

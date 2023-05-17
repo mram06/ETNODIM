@@ -8,9 +8,310 @@
     <link rel="stylesheet" href="css/style.css">
     <title>ETNODIM</title>
 <body>
-    <a href="index.html">Перейти на index.html</a><br><br>
-    <a href="catalogue.html">Перейти на catalogue.html</a><br><br>
-    <a href="item.html">Перейти на item.html</a><br><br>
-    <a href="cart.html">Перейти на cart.html</a>
+    <div class="wrapper">
+        <!-- header  -->
+        <header class="header">
+            <div class="container">
+                <div class="header__body">
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <a href="" class="header__burger"><img src="img/icons/burger.svg" alt="burger icon"></a>
+                            <a href="catalogue.html" class="active"><li>Каталог</li></a>
+                            <a href=""><li>Знижки</li></a>
+                            <a href=""><li>Блог</li></a>
+                            <a href=""><li>Про нас</li></a>
+                        </ul>
+                    </nav>
+                    <a href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo" id="top"></a>
+                    <ul class="header__tools">
+                        <li class="header__language">
+                            <label for="lang">UA</label>
+                            <input type="checkbox" id="lang">
+                            <ul class="header__language-hidden">
+                                <li><a href="">EN</a></li>
+                                <li><a href="">PL</a></li>
+                                <li><a href="">DE</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__language">
+                            <label for="currency"><img src="img/icons/gryvnia.svg" alt="gryvnia icon"></label>
+                            <input type="checkbox" id="currency">
+                            <ul class="header__language-hidden">
+                                <li><a href=""><img src="img/icons/dollar.svg" alt="dollar"></a></li>
+                                <li><a href=""><img src="img/icons/euro.svg" alt="euro"></a></li>
+                            </ul>
+                        </li>
+                            
+                        <a href="" class="header__phone"><li>+38 097 888 92 92</li></a>
+                        <a href=""><li><img src="img/icons/search.svg" alt="search icon"></li></a>
+                        <a href="cart.html" class="header__cart"><li><img src="img/icons/cart.svg" alt="search icon"><span class="header__cart-label">1</span></li></a>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- end of header  -->
+
+        <div class="content">
+            <div class="container">
+
+                <div class="hero">
+                    <div class="hero__body">
+                        <h1 class="hero__title title">більше ніж <br> просто одяг</h1>
+                        <p class="hero__text">Нова літня колекція</p>
+                        <button class="hero__button button">дивитись колекцію</button>
+                    </div>
+                </div>
+
+                <div class="etnodim">
+                    <div class="etnodim__body">
+                    </div>
+                </div>
+
+                <!-- income slider -->
+                <div class="slider">
+                    <div class="slider__body income__body">
+                        <!-- <div class="slider__heading">
+                            <h1 class="slider__title title">вам може сподобатися</h1>
+                            <div class="slider__arrow-row">
+                                <a href="" class="slider__arrow"><img src="img/slider/arrow_left.svg" alt="arrow icon"></a>
+                                <a href="" class="slider__arrow"><img src="img/slider/arrow_right.svg" alt="arrow icon"></a>
+                            </div>
+                        </div> -->
+                        <h1 class="slider__title title">нові надходження</h1>
+
+                        <!-- slider arrows -->
+                        <input class="slider__input-left" checked type="radio" name=slider id="left">
+                        <label class="slider__arrow-left slider__arrow-row" for="left"></label>
+                        <input class="slider__input-right" type="radio" name=slider id="right">
+                        <label class="slider__arrow-right slider__arrow-row" for="right"></label>
+                        <!-- end of slider arrows -->
+
+                        <div class="slider__row">
+                            <div class="slider__item">
+                                <a class="slider__item-photo index__slider-photo" href=""><img src="img/index/slider1.png" alt="item photo"></a>
+                                <p class="slider__item-text">Набір для створення вишивки Home Tree Green</p>
+                                <p class="slider__item-price">2 120 грн.</p>
+                            </div>
+                            <div class="slider__item">
+                                <a class="slider__item-photo index__slider-photo" href=""><img src="img/index/slider2.png" alt="item photo"></a>
+                                <p class="slider__item-text">Легка блузка вільного крою з орнаментом Indi</p>
+                                <p class="slider__item-price">3 800 грн.</p>
+                            </div>
+                            <div class="slider__item">
+                                <a class="slider__item-photo index__slider-photo" href=""><img src="img/index/slider3.png" alt="item photo"></a>
+                                <p class="slider__item-text">Чоловіча лльна сорочка з вишивкою Sky</p>
+                                <p class="slider__item-price">2 800 грн.</p>
+                            </div>
+                            <div class="slider__item">
+                                <a class="slider__item-photo index__slider-photo" href=""><img src="img/index/slider4.png" alt="item photo"></a>
+                                <p class="slider__item-text">Легка блузка вільного крою з орнаментом Indi</p>
+                                <p class="slider__item-price">3 800 грн.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of income slider -->
+
+                <div class="collection">
+                    <div class="collection__body">
+                        <div class="collection__row">
+                            <div class="collection__about">
+                                <p class="collection__label">etnodim</p>
+                                <h2 class="collection__title title">капсульна колекція до дня вишиванки </h2>
+                                <p class="collection__text">
+                                    Лімітована серія нетипових вишиванок Etnodim 
+                                    створена спеціально до Дня вишиванки. <br>
+                                    Поряд із традиційною вишивкою на виробах з’явилися 
+                                    «нові символи».
+                                </p>
+                                <button class="collection__button button">переглянути</button>
+                            </div>
+                            <div class="collection__photo"><img src="img/index/collection_photo.png" alt="photo"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- offer slider -->
+                <div class="slider">
+                    <div class="slider__body offer__body">
+                        <!-- <div class="slider__heading">
+                            <h1 class="slider__title title">вам може сподобатися</h1>
+                            <div class="slider__arrow-row">
+                                <a href="" class="slider__arrow"><img src="img/slider/arrow_left.svg" alt="arrow icon"></a>
+                                <a href="" class="slider__arrow"><img src="img/slider/arrow_right.svg" alt="arrow icon"></a>
+                            </div>
+                        </div> -->
+                        <h1 class="slider__title title">нові надходження</h1>
+
+                        <!-- slider arrows -->
+                        <input class="slider__input-left" checked type="radio" name=slider id="left">
+                        <label class="slider__arrow-left slider__arrow-row" for="left"></label>
+                        <input class="slider__input-right" type="radio" name=slider id="right">
+                        <label class="slider__arrow-right slider__arrow-row" for="right"></label>
+                        <!-- end of slider arrows -->
+
+                        <div class="slider__row">
+                            <div class="slider__item">
+                                <a class="slider__item-photo offer__slider-photo" href=""><img src="img/index/offer1.png" alt="item photo"></a>
+                                <p class="slider__item-text">Вишиванка для дівчинки Sakura</p>
+                                <p class="slider__item-price offer__slider-price">1 827 грн. <span>2 030 грн.</span></p>
+                            </div>
+                            <div class="slider__item">
+                                <a class="slider__item-photo offer__slider-photo" href=""><img src="img/index/offer2.png" alt="item photo"></a>
+                                <p class="slider__item-text">Чоловічий світшот бордовий VMG2</p>
+                                <p class="slider__item-price offer__slider-price">450 грн. <span>750 грн.</span></p>
+                            </div>
+                            <div class="slider__item">
+                                <a class="slider__item-photo offer__slider-photo" href=""><img src="img/index/offer3.png" alt="item photo"></a>
+                                <p class="slider__item-text">Лляна сукня темно-синього кольору Nizhnist Violet</p>
+                                <p class="slider__item-price offer__slider-price">3 582 грн. <span>3 980 грн.</span></p>
+                            </div>
+                            <div class="slider__item">
+                                <a class="slider__item-photo offer__slider-photo" href=""><img src="img/index/offer4.png" alt="item photo"></a>
+                                <p class="slider__item-text">Лляна сорочка молочного кольору з аплікацією MALVA</p>
+                                <p class="slider__item-price offer__slider-price">2 880 грн. <span>3 200 грн.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of offer slider -->
+
+                <div class="philosophy">
+                    <div class="philosophy__body">
+                        <div class="philosophy__row">
+                            <div class="philosophy__photos">
+                                <img src="img/index/philosophy1.png" alt="photo">.
+                                <img src="img/index/philosophy2.png" alt="photo">
+                            </div>
+                            <div class="philosophy__about">
+                                <p class="philosophy__label">etnodim</p>
+                                <h2 class="philosophy__title title">наша філософія</h2>
+                                <div class="philosophy__text">
+                                    <p>
+                                        Ми вважаємо, що етнічний одяг потрібно розвивати. Це один з важливих елементів української ідентифікації. Створюючи вишиванки, кожен з нас не просто виробляє продукт, а творить українську історію.
+                                    </p>
+                                    <p>
+                                        Створювати орнаменти на вишиванках - це мистецтво, а мистецтво, 
+                                        в свою чергу, - це відображення реальності. Саме так і народжуються речі, які мають історичні мотиви, та, зокрема, наповнені новим, сучасним баченням, таким, який оточує нас саме в цей час.
+                                    </p>
+                                </div>
+                                <button class="philosophy__button">читати далі</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stuffs">
+                    <div class="stuffs__body">
+                    </div>
+                </div>
+
+                <div class="drabyna">
+                    <div class="drabyna__body">
+                        <div class="drabyna__row">
+                            <div class="drabyna__about">
+                                <p class="drabyna__label">etnodim</p>
+                                <h2 class="drabyna__title title">drabyna</h2>
+                                <p class="drabyna__text">
+                                    Проект DRABYNA – це платформа для реалізації ідей молодих дизайнерів.
+                                    Кращі моделі будуть спільно реалізовані дизайнером та командою ETNODIM. <br><br>
+                                    Надсилайте свої роботи до 25 числа кожного місяця. Після цієї дати ми підводимо підсумок 
+                                    та оголошуємо імена обраних.
+                                </p>
+                                <button class="drabyna__button button">дізнатися більше</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store">
+                    <div class="store__body">
+                        <div class="store__about">
+                            <h2 class="store__title title">завітайте до нашого магазину</h2>
+                            <p class="store__location-text">
+                                Україна, м. Київ, вул. Верхній Вал 58/28
+                            </p>
+                            <ul class="store__times">
+                                <li>ПН-ПТ 10:00-20:00</li>
+                                <li>СБ-НД 11:00-19:00</li>
+                            </ul>
+                            <button class="store__button">подивитися на карті</button>
+                        </div>
+                        <div class="store__photos">
+                            <img src="img/index/store1.png" alt="photos">
+                            <img src="img/index/store2.png" alt="photos">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="follow">
+                    <div class="follow__body">
+                        <p class="follow__label">etnodim</p>
+                        <h2 class="follow__title title">Стежте за нами в instagram</h2>
+                        <p class="follow__text">Використовуйте хештег #etnodim і ми зможемо <br> побачити та поділитися вашими образами.</p>
+                        <div class="follow__row">
+                            <div class="follow__photo"><img src="img/index/follow1.png" alt="photo"></div>
+                            <div class="follow__photo"><img src="img/index/follow2.png" alt="photo"></div>
+                            <div class="follow__photo"><img src="img/index/follow3.png" alt="photo"></div>
+                            <div class="follow__photo"><img src="img/index/follow4.png" alt="photo"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- footer  -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__body">
+                    <a href="index.html" class="footer__logo"><img src="img/logo.svg" alt="logo"></a>
+                    <a href="#top" class="footer__link-arrow link-arrow"><img src="img/icons/link_arrow.svg" alt="arrow icon"></a>
+                    <div class="footer__row">
+                        <div class="footer__about">
+                            <ul class="footer__about-about">
+                                <li><a href="">Про нас</a></li>
+                                <li><a href="">Команда</a></li>
+                                <li><a href="">Блог</a></li>
+                                <li><a href="" class="active">Drabyna</a></li>
+                            </ul>
+    
+                            <ul class="footer__about-info">
+                                <li><a href="">Цікава інформація</a></li>
+                                <li><a href="">Вакансії</a></li>
+                                <li><a href="">Доставка та оплата</a></li>
+                                <li><a href="" class="active">Етнодім Маніфест</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="footer__contacts">
+                            <ul class="footer__contacts-list">
+                                <li><span class="underline">Контакти</span></li>
+                                <li>+38 097 888 92 92</li>
+                                <li>Україна, м. Київ, вул. Верхній Вал 58/28</li>
+                                <li>пн-пт 10:00-20:00</li>
+                                <li>сб-нд 11:00-19:00</li>
+                            </ul>
+                        </div>
+    
+                        <div class="footer__socials">
+                            <span class="underline">Соціальні мережі</span>
+                            <ul class="footer__socials-socials">
+                                <li><a href=""><img src="img/icons/fb_logo.svg" alt="facebook logo"></a></li>
+                                <li><a href=""><img src="img/icons/ytb_logo.svg" alt="youtube logo"></a></li>
+                                <li><a href=""><img src="img/icons/mail.svg" alt="mail"></a></li>
+                                <li><a href=""><img src="img/icons/pinterest_logo.svg" alt="pinterest logo"></a></li>
+                                <li><a href=""><img src="img/icons/instagram_logo.svg" alt="instagram logo"></a></li>
+                            </ul>
+                            <p class="footer__socials-copyright">© «Етнодім» 2009-2021</p>
+                        </div>
+                        <p class="footer__copyright-hidden">© «Етнодім» 2009-2021</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer  -->
+
+    </div>
 </body>
 </html>

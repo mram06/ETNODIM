@@ -5,7 +5,8 @@
             "format": "expanded",
             "autoprefix": "last 5 versions",
             "extensionName": ".css",
-            "savePath": "css"
+            "savePath": "css",
+            "liveServer.settings.fullReload": true
         }
     ]
 }
